@@ -5,7 +5,7 @@ const mongo_url = process.env.MONGO_URI;
 
 mongoose
   .connect(mongo_url,{
-    dbName: "Kanban"
+    dbName: "kanban"
   })
   .then(() => {
     console.log("Connected to MongoDB");

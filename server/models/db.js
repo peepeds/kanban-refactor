@@ -4,7 +4,9 @@ require("dotenv").config();
 const mongo_url = process.env.MONGO_URI;
 
 mongoose
-  .connect(mongo_url)
+  .connect(mongo_url,{
+    dbName: "Kanban"
+  })
   .then(() => {
     console.log("Connected to MongoDB");
   })
